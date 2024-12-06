@@ -5,7 +5,7 @@ Example Usage:
 
 python conkord.py --no_uniq -k 31 -bed feature_coordinates.bed -f feature.fa -r sequencing_data/ -t 15 --cluster -g genome.fa --gzip  
 
-Parameter Description:
+Parameter Description:  
 --no_uniq  Do not use only unique kmers for your feature. This is off by default but is useful for features like rDNA where it is hard to identify all of the genomic locations.  
 -k  kmer size (default 31)  
 -f  The fasta for your feature of interest  
