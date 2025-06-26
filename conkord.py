@@ -128,7 +128,7 @@ print(feature_list)
 
 #create a config file with contents adjusted by the argparse options
 with open("config.yml","a+") as fil:
-    fil.write("#config file for CONDO snakemake pipeline using user parameters" + "\n")
+    fil.write("#config file for CONKORD snakemake pipeline using user parameters" + "\n")
     fil.write("FPATH:" + "\n")
     for feature in feature_ref:
         fil.write("  - \"" + feature + "\"" + "\n")

@@ -133,6 +133,7 @@ outwin.close()
 #select a random subset of regions from this list to use for normalization
 window_subset = []
 
+random.seed(4)
 outfile = open("matched_windows_subset.bed","w+")
 if chrids != False:
     for chrm in chrID_list:
