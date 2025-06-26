@@ -208,7 +208,7 @@ rule cn_uniq:
                     shell("mv {feature}_{id}* jellyfish_files/")
                     if "filtered" not in id:
                         shell("mv matched_gc_{feature}_{id}* jellyfish_files/")
-                    shell("python Call_Copy_Number_GC_Normalization_Version8.py -r1 jellyfish_files/{feature}_{id}_k{k}_1.fa -r2 jellyfish_files/{feature}_{id}_k{k}_2.fa -nc1 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_1.fa -nc2 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_2.fa -ngcn matched_windows/matched_windows_subset_fcn_{feature}_unique_{k}mers.fa -ID {feature} -gcn feature/{feature}/{feature}_fcn_unique_{k}mers.fa")
+                    shell("python Call_Copy_Number_GC_Normalization_Version7_Filtering.py -r1 jellyfish_files/{feature}_{id}_k{k}_1.fa -r2 jellyfish_files/{feature}_{id}_k{k}_2.fa -nc1 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_1.fa -nc2 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_2.fa -ngcn matched_windows/matched_windows_subset_fcn_{feature}_unique_{k}mers.fa -ID {feature}_{id} -gcn feature/{feature}/{feature}_fcn_unique_{k}mers.fa")
                     shell("mv Copy_Numbers.tsv Copy_Numbers_{feature}_{id}_k{k}.tsv")
                     shell("mv Copy_Numbers_{feature}_{id}_k{k}.tsv results/")
 
@@ -258,6 +258,6 @@ rule cn_non_uniq:
                     shell("mv {feature}_{id}* jellyfish_files/")
                     if "filtered" not in id:
                         shell("mv matched_gc_{feature}_{id}* jellyfish_files/")
-                    shell("python Call_Copy_Number_GC_Normalization_Version8.py -r1 jellyfish_files/{feature}_{id}_k{k}_1.fa -r2 jellyfish_files/{feature}_{id}_k{k}_2.fa -nc1 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_1.fa -nc2 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_2.fa -ngcn matched_windows/matched_windows_subset_fcn_{feature}_unique_{k}mers.fa -ID {feature}_{id} -gcn feature/{feature}/{feature}_k{k}_cn.fa")
+                    shell("python Call_Copy_Number_GC_Normalization_Version7_Filtering.py -r1 jellyfish_files/{feature}_{id}_k{k}_1.fa -r2 jellyfish_files/{feature}_{id}_k{k}_2.fa -nc1 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_1.fa -nc2 jellyfish_files/matched_gc_{feature}_{id}_k{k}_filtered_2.fa -ngcn matched_windows/matched_windows_subset_fcn_{feature}_unique_{k}mers.fa -ID {feature}_{id} -gcn feature/{feature}/{feature}_k{k}_cn.fa")
                     shell("mv Copy_Numbers.tsv Copy_Numbers_nu_{feature}_{id}_k{k}.tsv")
                     shell("mv Copy_Numbers_nu_{feature}_{id}_k{k}.tsv results/")
