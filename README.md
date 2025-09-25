@@ -10,7 +10,7 @@ Parameter Description:
 -k  kmer size (default 31)  
 -f  The fasta for your feature of interest  
 -bed  A bed file with coordinates for your feature of interest in the reference genome.  
--r  Directory with only the sequencing reads in fastq or fastq.gz format  
+-r  Directory with only the sequencing reads in fastq or fastq.gz format. Reads must be paired end and end with an _1 and _2 instead of R1 or R2.
 -g  The reference genome  
 -gzip  If the reads are gzipped you must pass this flag  
 -t  Threads  
