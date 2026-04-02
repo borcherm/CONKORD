@@ -16,3 +16,9 @@ Parameter Description:
 -t:  Threads  
 -w_size:  The window size for finding G/C matched windows to normalize to (default 2000)  
 --cluster:  If you are using a cluster with slurm this will cause conkord.py to submit an sbatch command for snakemake with the number of cores provided  
+
+Tool Dependencies:  
+-jellyfish (2.3.1)  
+-bedtools (v2.30.0)  
+-samtools (1.23.1) htslib (1.23.1)  
+-Python (3.11.5)  
